@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Automation Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+      header {
+        padding: 3rem 1.5rem;
+        text-align: center;
+        background: #f4f4f4;
+      }
+      header h1 {
+        margin-bottom: 0.5rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+      }
+      section {
+        padding: 2rem 1.5rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .projects {
+        display: grid;
+        gap: 1.5rem;
+      }
+      .project {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        background: #fafafa;
+      }
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: 0.9rem;
+        color: #555;
+      }
+      a:hover {
+        color: #0077ff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h1>Jorge Mager</h1>
+      <p>Automation Developer • Web Development Enthusiast</p>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- PROJECTS SECTION -->
+<section id="projects">
+    <h2>Projects</h2>
+  
+    <p><a href="projects.html">See all projects →</a></p>
+  
+    <div class="projects">
+      <article class="project" style="text-align: center;">
+        <h3>Projects Coming Soon 🚧</h3>
+        <p>I’m currently learning React and building my first portfolio project.</p>
+      </article>
+    </div>
+  </section>
+  
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I am an automation developer with over 10 years of experience specializing in test automation using Selenium, WebdriverIO, TypeScript, Node.js, and AWS. Throughout my career, I’ve built robust automation frameworks, improved testing efficiency, and helped teams deliver high-quality software at scale. Recently, I’ve expanded my focus into web development — particularly React — to broaden my skill set and start building user-facing applications. This portfolio is part of my journey into full-stack development, where I’m applying everything I learn to create modern, clean, and functional web experiences.
+      </p>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        Feel free to reach out:
+        <a href="mailto:jorgemecher@gmail.com">jorgemecher@gmail.com</a>
+      </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>&copy; <span id="year"></span> Jorge Mager</footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
