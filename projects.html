@@ -7,22 +7,77 @@
       body {
         font-family: Arial, sans-serif;
         text-align: center;
-        padding-top: 50px;
+        padding: 40px 20px;
         background: #f9f9f9;
+        margin: 0;
       }
-      a {
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      .projects-container {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .project {
+        background: white;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 8px;
+      }
+
+      .project h2 {
+        margin-top: 0;
+      }
+
+      .project a {
+        color: #0077ff;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .back-link {
         display: inline-block;
-        margin-top: 20px;
+        margin-top: 40px;
         text-decoration: none;
         color: #0077ff;
         font-size: 18px;
       }
     </style>
   </head>
-  <body>
-    <h1>Projects Coming Soon 🚧</h1>
-    <p>I'm working on some awesome stuff. Check back later!</p>
 
-    <a href="index.html">← Back to Home</a>
+  <body>
+    <h1>All Projects</h1>
+    <p>Here are the projects I've built so far. More coming soon!</p>
+
+    <div class="projects-container">
+      <!-- React Tic Tac Toe Project -->
+      <div class="project">
+        <h2>React Tic Tac Toe</h2>
+        <p>
+          A simple Tic Tac Toe game built with React as part of my transition from
+          automation development into web development.
+        </p>
+        <p><strong>Tech:</strong> React, TypeScript, Vite</p>
+        <p>
+          <a href="https://limbogabi.github.io/tic-tac-toe/" target="_blank">
+            Live Demo
+          </a>
+          &nbsp;·&nbsp;
+          <a href="https://github.com/limbogabi/tic-tac-toe" target="_blank">
+            Code on GitHub
+          </a>
+        </p>
+      </div>
+
+      <!-- Add more project sections here later -->
+    </div>
+
+    <a class="back-link" href="index.html">← Back to Home</a>
   </body>
 </html>
+
