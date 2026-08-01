@@ -3,14 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projects — Empathy (Tyrell)</title>
+    <title>Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
-        --bg: #0b0c0e;
-        --text: #e8e9eb;
-        --muted: #9a9ea6;
-        --line: #24282f;
-        --accent: #c8ccd4;
+        --text: #1a1d21;
+        --body: #2c3138;
+        --muted: #5c6570;
+        --line: #d5dbe3;
+        --accent: #2f5d7c;
+        --dot: #9aa3ad;
+        --dot-active: #2f5d7c;
       }
 
       * { box-sizing: border-box; }
@@ -18,97 +26,121 @@
       body {
         margin: 0;
         min-height: 100vh;
-        font-family: "Segoe UI", Georgia, "Times New Roman", serif;
+        font-family: "Source Sans 3", "Segoe UI", sans-serif;
         background:
-          radial-gradient(1000px 500px at 50% -10%, #1a1d24 0%, transparent 55%),
-          var(--bg);
+          radial-gradient(900px 480px at 50% -8%, #e4eaf1 0%, transparent 60%),
+          linear-gradient(180deg, #f7f8fa 0%, #eef1f5 100%);
         color: var(--text);
-        line-height: 1.5;
+        line-height: 1.65;
       }
 
       main {
-        max-width: 680px;
+        max-width: 720px;
         margin: 0 auto;
-        padding: 2.25rem 1.25rem 2rem;
+        padding: 3rem 1.5rem 3.5rem;
       }
 
       h1 {
-        font-size: 1.65rem;
-        font-weight: 500;
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: clamp(1.9rem, 4vw, 2.35rem);
+        font-weight: 600;
         letter-spacing: -0.03em;
-        margin: 0 0 1.25rem;
-        padding-bottom: 1rem;
+        margin: 0 0 1.5rem;
+        padding-bottom: 1.15rem;
         border-bottom: 1px solid var(--line);
       }
 
-      .project-header {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: space-between;
-        gap: 0.75rem 1.5rem;
-        margin-bottom: 0.15rem;
-      }
-
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem 1.25rem;
-      }
-
-      .actions a {
-        color: var(--accent);
-        text-decoration: none;
+      .project {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
         border-bottom: 1px solid var(--line);
-        padding-bottom: 1px;
-        font-size: 0.95rem;
       }
 
-      .actions a:hover { border-color: var(--accent); }
+      .project:last-of-type {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
 
-      .project h2 {
-        font-size: 1.2rem;
-        font-weight: 500;
+      .project-title {
+        font-family: "Source Serif 4", Georgia, serif;
+        font-size: 1.4rem;
+        font-weight: 600;
         letter-spacing: -0.02em;
-        margin: 0;
+        margin: 0 0 0.25rem;
+        color: var(--text);
+        text-decoration: none;
       }
 
-      .tagline {
+      .project-title:hover { color: var(--accent); }
+
+      .subtitle {
         color: var(--muted);
         font-style: italic;
-        font-size: 0.95rem;
-        margin: 0 0 0.85rem;
+        font-size: 1.05rem;
+        margin: 0 0 1rem;
       }
 
-      .project p {
-        margin: 0 0 0.7rem;
-        color: #d2d4d8;
-        font-size: 0.95rem;
+      .carousel {
+        width: 100%;
       }
 
-      .project ul {
-        margin: 0 0 0.85rem;
-        padding-left: 1.1rem;
-        color: #d2d4d8;
-        font-size: 0.92rem;
+      .dots {
+        display: flex;
+        justify-content: center;
+        gap: 0.55rem;
+        margin-bottom: 0.75rem;
       }
 
-      .project li { margin-bottom: 0.4rem; }
-
-      .meta {
-        color: var(--muted);
-        font-size: 0.88rem;
-        margin: 0;
+      .dot {
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        background: var(--dot);
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
       }
 
-      .meta strong { color: var(--text); font-weight: 500; }
+      .dot[aria-current="true"] {
+        background: var(--dot-active);
+        transform: scale(1.15);
+      }
+
+      .dot:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      .carousel-frame {
+        display: block;
+        width: 100%;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        overflow: hidden;
+        background: #111;
+        box-shadow: 0 8px 28px rgba(26, 29, 33, 0.08);
+        cursor: pointer;
+      }
+
+      .carousel-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        object-position: top center;
+        pointer-events: none;
+      }
 
       .back-link {
         display: inline-block;
-        margin-top: 1.25rem;
+        margin-top: 2rem;
         color: var(--muted);
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.98rem;
       }
 
       .back-link:hover { color: var(--text); }
@@ -119,43 +151,97 @@
       <h1>Projects</h1>
 
       <article class="project">
-        <div class="project-header">
-          <h2>Empathy (Tyrell)</h2>
-          <div class="actions">
-            <a href="https://shadowly.ai" target="_blank" rel="noopener noreferrer">shadowly.ai</a>
-            <a href="https://github.com/theyesorno/empathy-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="project-title" href="projects/empathy.html">Empathy (Tyrell)</a>
+        <p class="subtitle">More human than human</p>
+
+        <div class="carousel" data-carousel>
+          <div class="dots" role="tablist" aria-label="Empathy screenshots">
+            <button type="button" class="dot" role="tab" aria-label="Screenshot 1" aria-current="true"></button>
+            <button type="button" class="dot" role="tab" aria-label="Screenshot 2"></button>
+            <button type="button" class="dot" role="tab" aria-label="Screenshot 3"></button>
           </div>
+          <button type="button" class="carousel-frame" aria-label="Show next Empathy screenshot">
+            <img
+              src="assets/projects/empathy/01-landing.png"
+              alt="Empathy landing page with access request form"
+              data-slides='[
+                "assets/projects/empathy/01-landing.png",
+                "assets/projects/empathy/02-concept.png",
+                "assets/projects/empathy/03-process.png"
+              ]'
+              data-alts='[
+                "Empathy landing page with access request form",
+                "Empathy concept section: a mirror that thinks",
+                "Empathy process section: three conversations"
+              ]'
+            />
+          </button>
         </div>
-        <p class="tagline">More human than human</p>
+      </article>
 
-        <p>
-          AI companion with zero-knowledge privacy and layered long-term memory for
-          Daimon — a guide for deep, reflective conversations over months and years,
-          not a generic chatbot. Builds the user’s evolving “twin”: a faithful portrait
-          of who they are (Blade Runner’s Voight-Kampff as founding metaphor).
-        </p>
+      <article class="project">
+        <a class="project-title" href="projects/chess-coach.html">Chess Coach</a>
+        <p class="subtitle">Socratic chess coaching with engine ground truth</p>
 
-        <ul>
-          <li>
-            <strong>Zero-knowledge:</strong> client-side AES (DEK), dual-wrapped under
-            passphrase + recovery questions — server never sees plaintext.
-          </li>
-          <li>
-            <strong>Layered memory:</strong> inline observations, periodic profile
-            synthesis, and structured recall — all client-side, feeding Daimon’s context.
-          </li>
-          <li>
-            <strong>Production:</strong> GitHub Actions + Playwright E2E, post-deploy
-            smoke tests with rollback, Postgres migrations, RLS, Resend email.
-          </li>
-        </ul>
-
-        <p class="meta">
-          <strong>Stack:</strong> Next.js (App Router), Vercel, Supabase, Anthropic Claude
-        </p>
+        <div class="carousel" data-carousel>
+          <div class="dots" role="tablist" aria-label="Chess Coach screenshots">
+            <button type="button" class="dot" role="tab" aria-label="Screenshot 1" aria-current="true"></button>
+            <button type="button" class="dot" role="tab" aria-label="Screenshot 2"></button>
+            <button type="button" class="dot" role="tab" aria-label="Screenshot 3"></button>
+          </div>
+          <button type="button" class="carousel-frame" aria-label="Show next Chess Coach screenshot">
+            <img
+              src="assets/projects/chess-coach/01-landing.png"
+              alt="Chess Coach landing page"
+              data-slides='[
+                "assets/projects/chess-coach/01-landing.png",
+                "assets/projects/chess-coach/02-sessions.png",
+                "assets/projects/chess-coach/03-coaching.png"
+              ]'
+              data-alts='[
+                "Chess Coach landing page",
+                "Chess Coach sessions list",
+                "Chess Coach board and coaching chat"
+              ]'
+            />
+          </button>
+        </div>
       </article>
 
       <a class="back-link" href="index.html">← Back to Home</a>
     </main>
+
+    <script>
+      document.querySelectorAll("[data-carousel]").forEach((carousel) => {
+        const img = carousel.querySelector("img");
+        const dots = [...carousel.querySelectorAll(".dot")];
+        const slides = JSON.parse(img.dataset.slides);
+        const alts = JSON.parse(img.dataset.alts);
+        let index = 0;
+
+        function show(next) {
+          index = next;
+          img.src = slides[index];
+          img.alt = alts[index];
+          dots.forEach((dot, i) => {
+            if (i === index) dot.setAttribute("aria-current", "true");
+            else dot.removeAttribute("aria-current");
+          });
+        }
+
+        dots.forEach((dot, i) => {
+          dot.addEventListener("click", (event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            show(i);
+          });
+        });
+
+        const frame = carousel.querySelector(".carousel-frame");
+        frame.addEventListener("click", () => {
+          show((index + 1) % slides.length);
+        });
+      });
+    </script>
   </body>
 </html>
