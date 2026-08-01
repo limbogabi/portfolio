@@ -2,164 +2,269 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experience</title>
     <style>
+      :root {
+        --bg: #0b0c0e;
+        --text: #e8e9eb;
+        --muted: #9a9ea6;
+        --line: #24282f;
+        --accent: #c8ccd4;
+        --body: #d2d4d8;
+      }
+
+      * { box-sizing: border-box; }
+
       body {
-        font-family: Arial, sans-serif;
-        max-width: 850px;
-        margin: 40px auto;
-        padding: 0 20px;
-        background: #f9f9f9;
-        line-height: 1.6;
-        color: #333;
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(1000px 500px at 50% -10%, #1a1d24 0%, transparent 55%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      main {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 2.25rem 1.25rem 2rem;
       }
 
       h1 {
-        text-align: center;
-        margin-bottom: 10px;
+        font-size: 1.65rem;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        margin: 0 0 1.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line);
       }
 
       h2 {
-        margin-top: 40px;
+        font-size: 1.05rem;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        margin: 1.75rem 0 0.75rem;
+        color: var(--text);
       }
 
       .section-intro {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 30px;
+        margin: 0 0 0.25rem;
+        color: var(--body);
+        font-size: 0.95rem;
       }
 
       .job {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        margin-bottom: 20px;
+        margin-bottom: 1.1rem;
+        padding-bottom: 1.1rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .job:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .job-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.35rem 1rem;
+        margin-bottom: 0.4rem;
       }
 
       .job h3 {
-        margin-top: 0;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: -0.01em;
+        margin: 0;
       }
 
-      .skills-list ul {
-        padding-left: 20px;
+      .job-dates {
+        color: var(--muted);
+        font-size: 0.88rem;
+        white-space: nowrap;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.1rem;
+        color: var(--body);
+        font-size: 0.92rem;
+      }
+
+      li { margin-bottom: 0.35rem; }
+
+      .projects p,
+      .edu p,
+      .langs p {
+        margin: 0 0 0.5rem;
+        color: var(--body);
+        font-size: 0.95rem;
+      }
+
+      .projects p:last-child,
+      .edu p:last-child,
+      .langs p:last-child {
+        margin-bottom: 0;
       }
 
       a {
-        color: #0077ff;
+        color: var(--accent);
         text-decoration: none;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 1px;
+      }
+
+      a:hover { border-color: var(--accent); }
+
+      strong { font-weight: 500; color: var(--text); }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.88rem;
       }
 
       .back-link {
-        display: block;
-        text-align: center;
-        margin-top: 40px;
-        font-size: 18px;
+        display: inline-block;
+        margin-top: 1.75rem;
+        color: var(--muted);
         text-decoration: none;
+        border-bottom: none;
+        font-size: 0.9rem;
       }
 
-      .projects {
-        background: white;
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-      }
+      .back-link:hover { color: var(--text); }
     </style>
   </head>
 
   <body>
-    <h1>My Experience</h1>
-    <p class="section-intro">
-      Experienced Automation Developer with 10+ years building scalable QA automation frameworks,
-      developer-focused tooling, and cloud-integrated test infrastructure. Skilled in Selenium, WDIO,
-      AWS, CI/CD, test architecture, and automation acceleration using AI. Passionate about 
-      maintainability, efficiency, and empowering engineering teams.
-    </p>
+    <main>
+      <h1>Experience</h1>
 
+      <p class="section-intro">
+        Automation engineer with 10+ years building QA automation frameworks,
+        developer tooling, and CI/CD infrastructure at Cellebrite, now focused
+        full-time on applied, agentic AI development. Hands-on builder of three
+        full-stack production applications on the Anthropic Claude API, spanning
+        conversational reasoning, coaching/analysis, and persistent-context
+        architectures. Fluent in the modern agentic and low-code AI toolchain
+        (Claude, Claude Skills, MCP tool integrations, Cursor-assisted “vibe coding”)
+        and in translating ambiguous business needs into working prototypes and
+        production builds. Track record mentoring engineers, running enablement
+        sessions, and driving AI-assisted development adoption across teams.
+      </p>
 
-    <!-- ============================ -->
-    <!-- PROFESSIONAL EXPERIENCE -->
-    <!-- ============================ -->
-    <h2>Professional Experience</h2>
+      <h2>Professional Experience</h2>
 
-    <div class="job">
-      <h3>Automation Developer – Cellebrite (2017–Present)</h3>
+      <div class="job">
+        <div class="job-header">
+          <h3>Automation Developer &nbsp;|&nbsp; Cellebrite</h3>
+          <span class="job-dates">2017 – Present</span>
+        </div>
+        <ul>
+          <li>
+            Designing and building an agentic Outlook email-processing pipeline for
+            integration-failure alerts: Outlook folder → n8n → Azure Service Bus →
+            Azure Function App (Node.js/TypeScript), where an LLM reads each email
+            plus DB history and orchestrates MCP tool calls — including a
+            Puppeteer-based browser-automation tool that logs into the integration
+            platform and auto-retries failed jobs — with every run logged to
+            PostgreSQL for audit and future context. Architected as a multi-folder,
+            multi-tool platform so new email sources and actions plug in without
+            core code changes.
+          </li>
+          <li>
+            Implemented AI-driven automation accelerators, applying AI-assisted
+            development to improve engineering efficiency.
+          </li>
+          <li>
+            Designed and implemented a BDD automation framework in JavaScript;
+            maintain C# and Node.js automation frameworks.
+          </li>
+          <li>
+            Built reporting services integrating third-party APIs; lead UI and API
+            automation using WebDriverIO.
+          </li>
+          <li>
+            Leveraged AWS automation environments; integrated GitHub Pages for QA
+            documentation.
+          </li>
+          <li>
+            Mentor engineers on automation, testing, and AI-assisted development
+            best practices; advocate within the team for agentic and low-code AI
+            tooling.
+          </li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <h3>Automation Leader &nbsp;|&nbsp; SafeNet</h3>
+          <span class="job-dates">2013 – 2017</span>
+        </div>
+        <ul>
+          <li>Developed a C# automation framework and led a small automation team.</li>
+          <li>Introduced modular testing practices to improve maintainability and reuse.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <h3>QA &amp; Automation Feature Lead &nbsp;|&nbsp; HP Software</h3>
+          <span class="job-dates">2010 – 2013</span>
+        </div>
+        <ul>
+          <li>Owned QA planning, testing, and reporting for feature areas.</li>
+          <li>Led automation framework selection.</li>
+        </ul>
+      </div>
+
+      <h2>Core Skills</h2>
       <ul>
-        <li>Designed and implemented a full BDD automation framework in TypeScript.</li>
-        <li>Maintained C# and Node.js automation frameworks for UI and API testing.</li>
-        <li>Developed reporting services integrating third-party APIs.</li>
-        <li>Led UI and API automation using WebDriverIO.</li>
-        <li>Mentored engineers on automation best practices and testing strategies.</li>
-        <li>Integrated GitHub Pages for internal QA Automation usage.</li>
-        <li>Leveraged AWS automation environments and infrastructure.</li>
+        <li><strong>Agentic AI &amp; LLM Engineering:</strong> Anthropic Claude API integration, agentic workflow design, MCP (Model Context Protocol) tool integrations, prompt engineering &amp; system-prompt design, Claude Skills authoring, multi-session/persistent-context architecture, responsible-AI &amp; data-handling practices</li>
+        <li><strong>AI-Assisted Development:</strong> Claude + Cursor “vibe coding” workflow (architecture-and-review by AI, execution in-IDE), rapid PoC-to-production iteration, low-code/no-code AI tool evaluation</li>
+        <li><strong>Full-Stack Development:</strong> Next.js (App Router)/React, Node.js, TypeScript, Supabase (Postgres + Auth), REST APIs, end-to-end architecture (frontend, backend, auth, database)</li>
+        <li><strong>Automation &amp; QA Engineering:</strong> C#, JavaScript/Node.js, Selenium, WebDriverIO, API testing, BDD (Gherkin), test architecture &amp; framework design</li>
+        <li><strong>Cloud &amp; DevOps:</strong> AWS, Vercel, Jenkins, GitHub Actions, CI/CD</li>
+        <li><strong>Enterprise Systems Exposure:</strong> Microsoft 365 (Teams, Outlook, SharePoint), Slack, Salesforce, Jira/Atlassian, monday.com, NetSuite, Mixpanel, Figma, Lucid</li>
+        <li><strong>Enablement &amp; Leadership:</strong> Mentorship, technical workshops, AI-adoption/change-management awareness, cross-functional collaboration with business and IT stakeholders</li>
       </ul>
-    </div>
 
-    <div class="job">
-      <h3>Automation Leader – SafeNet (2013–2017)</h3>
-      <ul>
-        <li>Developed a modular C# automation framework.</li>
-        <li>Led a small automation engineering team.</li>
-        <li>Introduced structured automation and testing practices.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3>QA & Automation Feature Lead – HP Software (2010–2013)</h3>
-      <ul>
-        <li>Led QA planning, testing, and reporting for major software releases.</li>
-        <li>Evaluated and selected automation frameworks for product teams.</li>
-      </ul>
-    </div>
-
-
-    <!-- ============================ -->
-    <!-- SKILLS SECTION -->
-    <!-- ============================ -->
-    <h2>Core Skills</h2>
-
-    <div class="skills-list">
-      <ul>
-        <li><strong>Programming & Automation:</strong> C#, JavaScript (Node.js), Selenium, WebDriverIO, API Testing, REST, BDD (Gherkin)</li>
-        <li><strong>Cloud & DevOps:</strong> AWS Services, Jenkins, GitHub Actions, CI/CD</li>
-        <li><strong>Tools & Technologies:</strong> Git, Postman, Third-Party APIs</li>
-        <li><strong>Soft Skills:</strong> Mentorship, Collaboration, Agile, Communication</li>
-      </ul>
-    </div>
-
-
-    <!-- ============================ -->
-    <!-- PROJECTS -->
-    <!-- ============================ -->
-    <h2>Projects</h2>
-
-    <div class="projects">
-        <p><strong>Internal QA Site (GitHub Pages):</strong> React-based tool to trigger automation jobs.</p>
-        <p><strong>AI Code Vibe Automation:</strong> Prototype leveraging AI-assisted script generation.</p>
-      
+      <h2>Projects</h2>
+      <div class="projects">
         <p>
-          <strong>See More Projects:</strong>
-          <a href="projects.html">View All Projects →</a>
+          <strong>Empathy (Tyrell) — shadowly.ai:</strong>
+          AI companion with zero-knowledge encryption and layered long-term memory for Daimon,
+          built to hold deep reflective conversations over time.
+        </p>
+        <p class="meta">
+          <a href="https://shadowly.ai" target="_blank" rel="noopener noreferrer">Live site</a>
+          ·
+          <a href="projects.html">Project details →</a>
         </p>
       </div>
-      
 
+      <h2>Education &amp; Continuing Development</h2>
+      <div class="edu">
+        <p><strong>Software Practical Engineer</strong></p>
+        <p>
+          Ongoing self-directed study: applied prompt engineering, agentic system
+          design, and responsible AI practices (Anthropic technical documentation
+          and research)
+        </p>
+      </div>
 
-    <!-- ============================ -->
-    <!-- EDUCATION -->
-    <!-- ============================ -->
-    <h2>Education</h2>
-    <p><strong>Software Practical Engineer</strong></p>
+      <h2>Languages</h2>
+      <div class="langs">
+        <p>Hebrew – Native &nbsp;|&nbsp; English – Superior &nbsp;|&nbsp; Spanish – Native</p>
+      </div>
 
-
-    <!-- ============================ -->
-    <!-- LANGUAGES -->
-    <!-- ============================ -->
-    <h2>Languages</h2>
-    <p>Hebrew – Native<br>English – Superior</p>
-
-
-    <a href="index.html" class="back-link">← Back to Home</a>
-
+      <a href="index.html" class="back-link">← Back to Home</a>
+    </main>
   </body>
 </html>

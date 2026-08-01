@@ -2,108 +2,160 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projects — Empathy (Tyrell)</title>
     <style>
+      :root {
+        --bg: #0b0c0e;
+        --text: #e8e9eb;
+        --muted: #9a9ea6;
+        --line: #24282f;
+        --accent: #c8ccd4;
+      }
+
+      * { box-sizing: border-box; }
+
       body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 40px 20px;
-        background: #f9f9f9;
         margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(1000px 500px at 50% -10%, #1a1d24 0%, transparent 55%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      main {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 2.25rem 1.25rem 2rem;
       }
 
       h1 {
-        margin-bottom: 10px;
+        font-size: 1.65rem;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        margin: 0 0 1.25rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line);
       }
 
-      .projects-container {
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: left;
+      .project-header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 0.75rem 1.5rem;
+        margin-bottom: 0.15rem;
       }
 
-      .project {
-        background: white;
-        border: 1px solid #ddd;
-        padding: 20px;
-        margin: 20px 0;
-        border-radius: 8px;
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
       }
+
+      .actions a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 1px;
+        font-size: 0.95rem;
+      }
+
+      .actions a:hover { border-color: var(--accent); }
 
       .project h2 {
-        margin-top: 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        margin: 0;
       }
 
-      .project a {
-        color: #0077ff;
-        text-decoration: none;
-        font-weight: bold;
+      .tagline {
+        color: var(--muted);
+        font-style: italic;
+        font-size: 0.95rem;
+        margin: 0 0 0.85rem;
       }
+
+      .project p {
+        margin: 0 0 0.7rem;
+        color: #d2d4d8;
+        font-size: 0.95rem;
+      }
+
+      .project ul {
+        margin: 0 0 0.85rem;
+        padding-left: 1.1rem;
+        color: #d2d4d8;
+        font-size: 0.92rem;
+      }
+
+      .project li { margin-bottom: 0.4rem; }
+
+      .meta {
+        color: var(--muted);
+        font-size: 0.88rem;
+        margin: 0;
+      }
+
+      .meta strong { color: var(--text); font-weight: 500; }
 
       .back-link {
         display: inline-block;
-        margin-top: 40px;
+        margin-top: 1.25rem;
+        color: var(--muted);
         text-decoration: none;
-        color: #0077ff;
-        font-size: 18px;
+        font-size: 0.9rem;
       }
+
+      .back-link:hover { color: var(--text); }
     </style>
   </head>
-
   <body>
-    <h1>All Projects</h1>
-    <p>Here are the projects I've built so far. More coming soon!</p>
+    <main>
+      <h1>Projects</h1>
 
-    >
+      <article class="project">
+        <div class="project-header">
+          <h2>Empathy (Tyrell)</h2>
+          <div class="actions">
+            <a href="https://shadowly.ai" target="_blank" rel="noopener noreferrer">shadowly.ai</a>
+            <a href="https://github.com/theyesorno/empathy-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+        <p class="tagline">More human than human</p>
 
-    <div class="projects-container">
-      <!-- QA Run Tracker Project -->
-      <div class="project">
-        <h2>QA Run Tracker</h2>
         <p>
-          A full-stack QA management tool that allows you to create and manage
-          test cases, build test runs, and track execution results. Developed as
-          part of my transition into full-stack web development.
+          AI companion with zero-knowledge privacy and layered long-term memory for
+          Daimon — a guide for deep, reflective conversations over months and years,
+          not a generic chatbot. Builds the user’s evolving “twin”: a faithful portrait
+          of who they are (Blade Runner’s Voight-Kampff as founding metaphor).
         </p>
-        <p>
-          <strong>Tech:</strong> React, TypeScript, Vite, Node.js, Express,
-          MongoDB Atlas, Render
-        </p>
-        <p>
-          <a href="https://limbogabi.github.io/qa-run-tracker/" target="_blank">
-            Live Demo (Frontend)
-          </a>
-          &nbsp;·&nbsp;
-          </a>
-          &nbsp;·&nbsp;
-          <a href="https://github.com/limbogabi/qa-run-tracker" target="_blank">
-            Code on GitHub
-          </a>
-        </p>
-      </div>
 
-      <!-- React Tic Tac Toe Project -->
-      <div class="project">
-        <h2>React Tic Tac Toe</h2>
-        <p>
-          A simple Tic Tac Toe game built with React as part of my transition
-          from automation development into web development.
-        </p>
-        <p><strong>Tech:</strong> React, TypeScript, Vite</p>
-        <p>
-          <a href="https://limbogabi.github.io/tic-tac-toe/" target="_blank">
-            Live Demo
-          </a>
-          &nbsp;·&nbsp;
-          <a href="https://github.com/limbogabi/tic-tac-toe" target="_blank">
-            Code on GitHub
-          </a>
-        </p>
-      </div>
+        <ul>
+          <li>
+            <strong>Zero-knowledge:</strong> client-side AES (DEK), dual-wrapped under
+            passphrase + recovery questions — server never sees plaintext.
+          </li>
+          <li>
+            <strong>Layered memory:</strong> inline observations, periodic profile
+            synthesis, and structured recall — all client-side, feeding Daimon’s context.
+          </li>
+          <li>
+            <strong>Production:</strong> GitHub Actions + Playwright E2E, post-deploy
+            smoke tests with rollback, Postgres migrations, RLS, Resend email.
+          </li>
+        </ul>
 
-      <!-- Add more project sections here later -->
-    </div>
+        <p class="meta">
+          <strong>Stack:</strong> Next.js (App Router), Vercel, Supabase, Anthropic Claude
+        </p>
+      </article>
 
-    <a class="back-link" href="index.html">← Back to Home</a>
+      <a class="back-link" href="index.html">← Back to Home</a>
+    </main>
   </body>
 </html>

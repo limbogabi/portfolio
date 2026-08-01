@@ -2,93 +2,149 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Automation Developer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jorge Mager</title>
     <style>
+      :root {
+        --bg: #0b0c0e;
+        --text: #e8e9eb;
+        --muted: #9a9ea6;
+        --line: #24282f;
+        --accent: #c8ccd4;
+        --body: #d2d4d8;
+      }
+
+      * { box-sizing: border-box; }
+
       body {
-        font-family: system-ui, -apple-system, sans-serif;
         margin: 0;
-        padding: 0;
-        line-height: 1.6;
+        min-height: 100vh;
+        font-family: "Segoe UI", Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(1000px 500px at 50% -10%, #1a1d24 0%, transparent 55%),
+          var(--bg);
+        color: var(--text);
+        line-height: 1.5;
       }
-      header {
-        padding: 3rem 1.5rem;
-        text-align: center;
-        background: #f4f4f4;
-      }
-      header h1 {
-        margin-bottom: 0.5rem;
-      }
-      nav a {
-        margin: 0 0.5rem;
-        text-decoration: none;
-        color: #333;
-        font-weight: 500;
-      }
-      section {
-        padding: 2rem 1.5rem;
-        max-width: 900px;
+
+      main {
+        max-width: 680px;
         margin: 0 auto;
+        padding: 2.25rem 1.25rem 2rem;
       }
-      .projects {
-        display: grid;
-        gap: 1.5rem;
+
+      header {
+        margin-bottom: 1.75rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--line);
       }
-      .project {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 1rem;
-        background: #fafafa;
+
+      h1 {
+        font-size: 1.65rem;
+        font-weight: 500;
+        letter-spacing: -0.03em;
+        margin: 0 0 0.35rem;
       }
+
+      .tagline {
+        color: var(--muted);
+        font-style: italic;
+        font-size: 0.95rem;
+        margin: 0 0 1rem;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
+      }
+
+      nav a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 1px;
+        font-size: 0.95rem;
+      }
+
+      nav a:hover { border-color: var(--accent); }
+
+      h2 {
+        font-size: 1.05rem;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+        margin: 0 0 0.65rem;
+      }
+
+      section {
+        margin-bottom: 1.5rem;
+      }
+
+      section p {
+        margin: 0;
+        color: var(--body);
+        font-size: 0.95rem;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 1px;
+      }
+
+      a:hover { border-color: var(--accent); }
+
       footer {
-        text-align: center;
-        padding: 1.5rem;
-        font-size: 0.9rem;
-        color: #555;
-      }
-      a:hover {
-        color: #0077ff;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.88rem;
       }
     </style>
   </head>
   <body>
-    <!-- HEADER -->
-    <header>
-      <h1>Jorge Mager</h1>
-      <p>Automation Developer • Web Development Enthusiast</p>
-      <nav>        
-        <a href="experience.html">Experience</a>   <!-- NEW -->
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="projects.html">Projects</a>
-      </nav>
-      
-    </header>
-  
+    <main>
+      <header>
+        <h1>Jorge Mager</h1>
+        <p class="tagline">Automation Engineer · Applied Agentic AI</p>
+        <nav>
+          <a href="experience.html">Experience</a>
+          <a href="projects.html">Projects</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-    <!-- ABOUT SECTION -->
-    <section id="about">
-      <h2>About</h2>
-      <p>
-        I am an automation developer with over 10 years of experience specializing in test automation using Selenium, WebdriverIO, TypeScript, Node.js, and AWS. Throughout my career, I’ve built robust automation frameworks, improved testing efficiency, and helped teams deliver high-quality software at scale. Recently, I’ve expanded my focus into web development — particularly React — to broaden my skill set and start building user-facing applications. This portfolio is part of my journey into full-stack development, where I’m applying everything I learn to create modern, clean, and functional web experiences.
-      </p>
-    </section>
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Automation engineer with 10+ years building QA automation frameworks,
+          developer tooling, and CI/CD infrastructure at Cellebrite, now focused
+          full-time on applied, agentic AI development. Hands-on builder of three
+          full-stack production applications on the Anthropic Claude API, spanning
+          conversational reasoning, coaching/analysis, and persistent-context
+          architectures. Fluent in the modern agentic and low-code AI toolchain
+          (Claude, Claude Skills, MCP tool integrations, Cursor-assisted “vibe coding”)
+          and in translating ambiguous business needs into working prototypes and
+          production builds.
+        </p>
+      </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>
-        Feel free to reach out:
-        <a href="mailto:jorgemecher@gmail.com">jorgemecher@gmail.com</a>
-      </p>
-    </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Feel free to reach out:
+          <a href="mailto:jorgemecher@gmail.com">jorgemecher@gmail.com</a>
+        </p>
+      </section>
 
-    <!-- FOOTER -->
-    <footer>&copy; <span id="year"></span> Jorge Mager</footer>
+      <footer>&copy; <span id="year"></span> Jorge Mager</footer>
+    </main>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
-<!-- trigger build -->
