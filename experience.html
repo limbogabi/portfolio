@@ -139,12 +139,14 @@
 
       .back-link {
         display: inline-block;
-        margin-top: 2.25rem;
         color: var(--muted);
         text-decoration: none;
         border-bottom: none;
         font-size: 0.98rem;
       }
+
+      .back-link.top { margin: 0 0 1.25rem; }
+      .back-link.bottom { margin-top: 2.25rem; }
 
       .back-link:hover { color: var(--text); }
     </style>
@@ -152,6 +154,7 @@
 
   <body>
     <main>
+      <a href="index.html" class="back-link top">← Back to Home</a>
       <h1>Experience</h1>
 
       <p class="section-intro">
@@ -275,7 +278,7 @@
         <p>Hebrew – Native &nbsp;|&nbsp; English – Superior &nbsp;|&nbsp; Spanish – Native</p>
       </div>
 
-      <a href="index.html" class="back-link">← Back to Home</a>
+      <a href="index.html" class="back-link bottom">← Back to Home</a>
     </main>
   </body>
 </html>
