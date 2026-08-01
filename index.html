@@ -91,15 +91,27 @@
         gap: 1.5rem 1.75rem;
       }
 
+      .photo-link {
+        display: inline-block;
+        flex-shrink: 0;
+        line-height: 0;
+        border-radius: 50%;
+        border-bottom: none;
+      }
+
+      .photo-link:hover .photo {
+        box-shadow: 0 10px 28px rgba(26, 29, 33, 0.16);
+      }
+
       .photo {
         width: 160px;
         height: 160px;
         border-radius: 50%;
         object-fit: cover;
-        object-position: center 12%;
+        object-position: center 18%;
         border: 1px solid var(--line);
         box-shadow: 0 8px 24px rgba(26, 29, 33, 0.1);
-        flex-shrink: 0;
+        display: block;
       }
 
       .contact-details p {
@@ -151,11 +163,15 @@
       <section id="contact">
         <h2>Contact</h2>
         <div class="contact-card">
-          <img
-            class="photo"
-            src="assets/profile.png"
-            alt="Jorge Mager"
-          />
+          <a class="photo-link" href="contact.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full contact photo">
+            <img
+              class="photo"
+              src="contact.jpg"
+              alt="Jorge Mager"
+              width="160"
+              height="160"
+            />
+          </a>
           <div class="contact-details">
             <p class="label">Email</p>
             <p>
@@ -171,6 +187,10 @@
             </p>
             <p class="label">Location</p>
             <p>Ramat Gan, Tel Aviv District, Israel</p>
+            <p class="label">CV</p>
+            <p>
+              <a href="assets/Jorge-Mager-CV.pdf" download>Download CV (PDF)</a>
+            </p>
           </div>
         </div>
       </section>
